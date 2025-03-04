@@ -8,7 +8,7 @@ export const getStockData = async (symbol: string) => {
     const response = await axios.get(`${API_URL}/stocks/${symbol}`);
     return response.data;
   } catch (error) {
-    console.error(`❌ Ошибка при загрузке ${symbol}:`, error);
+    console.error(` Ошибка при загрузке ${symbol}:`, error);
     return null;
   }
 };

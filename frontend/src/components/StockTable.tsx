@@ -14,7 +14,7 @@ export default function StockTable() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [filter, setFilter] = useState("all");
-  const [isUpdating, setIsUpdating] = useState(true); // ✅ Флаг для управления автообновлением
+  const [isUpdating, setIsUpdating] = useState(true);
 
   async function fetchData() {
     setLoading(true);
@@ -58,7 +58,6 @@ export default function StockTable() {
         📊 Биржевой монитор
       </h2>
 
-      {/* 🔍 Поле поиска */}
       <input
         type="text"
         placeholder="🔍 Поиск по символу (например, AAPL)"
@@ -67,7 +66,6 @@ export default function StockTable() {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
 
-      {/* 🎛 Кнопки фильтрации */}
       <div className="flex justify-center gap-2 mb-4">
         <button
           className={`px-4 py-2 rounded-lg transition-all font-medium ${
@@ -95,7 +93,6 @@ export default function StockTable() {
         </button>
       </div>
 
-      {/* 🔄 Кнопка управления обновлением */}
       <button
         className="w-full px-4 py-2 mb-4 rounded-lg text-white font-semibold transition-all"
         onClick={() => setIsUpdating(!isUpdating)}
@@ -106,7 +103,6 @@ export default function StockTable() {
         {isUpdating ? "⏸ Остановить обновление" : "▶ Возобновить обновление"}
       </button>
 
-      {/* 🕒 Индикация загрузки */}
       {loading ? (
         <p className="text-gray-400 text-center animate-pulse">⏳ Загружаем данные...</p>
       ) : (
