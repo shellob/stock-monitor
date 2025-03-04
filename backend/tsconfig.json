@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",                 // Используем CommonJS для совместимости с Node.js
+    "moduleResolution": "Node",           // Позволяет корректно импортировать модули
+    "target": "ES6",                       // Компилируем в ES6
+    "outDir": "./dist",                    // Каталог для скомпилированных файлов
+    "rootDir": "./src",                    // Корневой каталог исходников
+    "strict": true,                         // Включает строгую типизацию
+    "esModuleInterop": true,               // Позволяет использовать `import` с CommonJS модулями
+    "skipLibCheck": true,                   // Пропускаем проверку типов в node_modules
+    "forceConsistentCasingInFileNames": true, // Запрещает использовать разные регистры в именах файлов
+    "resolveJsonModule": true,              // Позволяет импортировать JSON-файлы
+    "types": ["node"],                    // Загружаем определения типов для Node.js
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src"],                         // Указываем, какие файлы компилировать
+  "exclude": ["node_modules", "dist"]         // Исключаем папки node_modules и dist
+}
