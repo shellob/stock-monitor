@@ -22,7 +22,7 @@ export const getStocksList = async (symbols: string[]) => {
     );
     return responses;
   } catch (error) {
-    console.error("❌ Ошибка загрузки акций:", error);
+    console.error(" Ошибка загрузки акций:", error);
     return [];
   }
 };
@@ -32,7 +32,7 @@ export const getAllStocks = async () => {
     const response = await axios.get(`${API_URL}/stocks`);
     return response.data; // Ожидаем массив объектов с символами и ценами
   } catch (error) {
-    console.error("❌ Ошибка при загрузке списка всех акций:", error);
+    console.error(" Ошибка при загрузке списка всех акций:", error);
     return [];
   }
 
@@ -42,7 +42,7 @@ export async function getStockHistory(symbol: string) {
     const response = await axios.get(`${API_URL}/history/${symbol}`);
     return response.data;
   } catch (error) {
-    console.error("❌ Ошибка загрузки истории цен:", error);
+    console.error(" Ошибка загрузки истории цен:", error);
     return null;
   }
 };
