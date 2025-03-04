@@ -48,22 +48,22 @@ npm install
 
 ```env
 FINNHUB_API_KEY=ВАШ_API_КЛЮЧ
-PORT=4001
+PORT=3000
 ```
 
 ### **3. Запуск Backend**
 ```sh
 cd backend
-npm run start
+npm run start:dev
 ```
-После успешного запуска сервер будет доступен по адресу **http://localhost:4001**
+После успешного запуска сервер будет доступен по адресу **http://localhost:3000**
 
 ### **4. Запуск Frontend**
 ```sh
 cd frontend
 npm run dev
 ```
-После успешного запуска интерфейс будет доступен по адресу **http://localhost:3000**
+После успешного запуска интерфейс будет доступен по адресу **http://localhost:3001**
 
 ## **Возможные ошибки и их решения**
 
